@@ -1143,6 +1143,20 @@ to get your badge of completion!
 
 That's it, you are done: expect an email in the next days!
 
+### Homework Resolution
+
+In order to insert the extra data, I have used dsbulk and CQL and took the following steps:
+
+1. Created a new genre label by doing to "CQL Console" tab of the database, directly on Astra's database dashboard, and sent the following:
+    ```cql
+    INSERT INTO netflix.reference_list (label, value) VALUES ("genre", "AA_LUIS");
+    ```
+2. Created [luis_movies.csv](./data/luis_movies.csv) file with some custom movie entry for 2 genres, one of which being the custom one which was added, and in gitpod's terminal ran the following command:
+    ```bash
+    astra db load workshops -url data/luis_movies.csv -k netflix -t movies_by_genre
+    ```
+3. Refreshed the site and validated that the new data is displaying as intended.
+
 # Extra resources
 
 ## Video tutorial with Ania Kubow
