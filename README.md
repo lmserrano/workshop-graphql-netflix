@@ -1156,6 +1156,15 @@ In order to insert the extra data, I have used dsbulk and CQL and took the follo
     astra db load workshops -url data/luis_movies.csv -k netflix -t movies_by_genre
     ```
 3. Refreshed the site and validated that the new data is displaying as intended.
+4. Added [data/screenshots](./data/screenshots/) folder with the screenshots for the changes done:
+    1. Added `AA_LUIS` genre
+    2. Added 2 movie entries of movie `LUIS and Dragon Ball`, one to `AA_LUIS` genre, and the other to `Action` genre
+
+Screenshots shown below:
+
+![2023-03-22_19-57-08.png](./data/screenshots/2023-03-22_19-57-08.png)
+
+![2023-03-22_19-57-45.png](./data/screenshots/2023-03-22_19-57-45.png)
 
 # Extra resources
 
